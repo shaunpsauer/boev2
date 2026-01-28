@@ -5,19 +5,41 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Design System Colors */
+  --color-primary: #1E3A8A;
+  --color-primary-light: #3B82F6;
+  --color-slate-800: #1E293B;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-blue-200: #93C5FD;
+  --color-blue-100: #DBEAFE;
+  --color-blue-50: #EFF6FF;
+  --color-slate-50: #F8FAFC;
+  --color-border: #E2E8F0;
+  --color-white: #FFFFFF;
+  
+  /* Specific for dark elements */
+  --color-black: #000000;
+  --color-react: #61DAFB;
+  --color-ts: #3178C6;
+  --color-tailwind: #06B6D4;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html,
+  body {
+    height: 100%;
+  }
+
+  .font-primary {
+    font-family: var(--font-geist-sans), "Inter", sans-serif;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 @layer utilities {
